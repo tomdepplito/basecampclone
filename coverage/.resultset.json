@@ -1,0 +1,114 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/apprentice/Desktop/basecampclone/app/models/user.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1343845048
+  },
+  "RSpec": {
+    "coverage": {
+      "/Users/apprentice/Desktop/basecampclone/app/models/user.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1343845958
+  }
+}
