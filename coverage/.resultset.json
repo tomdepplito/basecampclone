@@ -12,6 +12,10 @@
         null,
         1,
         null,
+        null,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/apprentice/Desktop/basecampclone/app/controllers/application_controller.rb": [
@@ -50,9 +54,18 @@
         1,
         null,
         null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/models/project.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null
       ]
     },
-    "timestamp": 1343845048
+    "timestamp": 1343847420
   },
   "RSpec": {
     "coverage": {
@@ -69,6 +82,8 @@
         null,
         null,
         1,
+        null,
+        1,
         null
       ],
       "/Users/apprentice/Desktop/basecampclone/app/controllers/application_controller.rb": [
@@ -107,8 +122,17 @@
         1,
         null,
         null
+      ],
+      "/Users/apprentice/Desktop/basecampclone/app/models/project.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null
       ]
     },
-    "timestamp": 1343845958
+    "timestamp": 1343847226
   }
 }
