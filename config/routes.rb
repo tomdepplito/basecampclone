@@ -1,8 +1,9 @@
 Basecampclone::Application.routes.draw do
-  resources :users do
-    resources :projects
-  end
+  devise_for :users
+  
+  resources :projects
 
-  root :to => "sessions#new"
+
+  root :to => "projects#index"
   
 end

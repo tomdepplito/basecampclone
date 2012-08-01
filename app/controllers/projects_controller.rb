@@ -1,17 +1,19 @@
 class ProjectsController < ApplicationController
   def index
-    
+    @projects = Project.all
   end
+  
   def new
     @project = Project.new
   end
   
   def create
-    @project = Project.new(params[:project])
     audit params
+    @project = Project.new(params[:project])
+    @project.user_id = current_user.id
     if @project.save
       flash[:success] = "You created a new project"
-      redirect_to user_projects_path
+      redirect_to root_path
     else
       flash[:error] = "Something went wrong"
       render :new

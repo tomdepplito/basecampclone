@@ -1,0 +1,15 @@
+<div class="navbar">
+  <div class="navbar-inner">
+     <div class="container">
+       <ul class="nav">
+         <% if user_signed_in? %>
+         <li><%= link_to "Projects", projects_path %></li>
+         <li><%= link_to "Sign out",  destroy_user_session_path, :method => :delete %></li>
+         <% elsif %>
+
+          <li><%= link_to "Projects", projects_path %></li>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <% end %>
+     </div>
+   </div>
+</div>

@@ -2,5 +2,7 @@
 <%= form_for @project do |p| %>
   <%= p.label "Project Name" %>
   <%= p.text_field :name %>
+  <%= p.label "Set to Public?" %>
+  <%= p.check_box :public %>
   <%= p.submit "Create" %>
 <% end %>
