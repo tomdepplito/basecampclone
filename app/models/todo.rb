@@ -1,7 +1,7 @@
 class Todo < ActiveRecord::Base
-  attr_accessible :name, :project_id
+  attr_accessible :name, :project_id, :tasks_attributes
   
   has_many :tasks
   
-  validates_presence_of :project_id
+  accepts_nested_attributes_for :tasks
 end
