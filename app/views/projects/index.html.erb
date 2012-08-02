@@ -1,6 +1,15 @@
 <h1>Projects</h1>
+<% if @private_projects %>
+  <h2>Private Projects</h2>
+  <ul>
+  <% @private_projects.each do |project| %>
+    <li><%= project.name %></li>
+  <% end %>
+</ul>
+<% end %>
+<h2>Public Projects</h2>
 <ul>
-<% @projects.each do |project| %>
-  <li><%= project.name %></li>
+<% @public_projects.each do |project| %>
+<li><%= project.name %></li>
 <% end %>
 </ul>

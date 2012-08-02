@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    if user_signed_in?
+      @private_projects = Project.find_all_by_user_id(current_user.id)
+    end
+      @public_projects = Project.find_all_by_public(true)
   end
   
   def new
@@ -8,7 +11,6 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    audit params
     @project = Project.new(params[:project])
     @project.user_id = current_user.id
     if @project.save
