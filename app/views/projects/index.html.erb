@@ -3,13 +3,13 @@
   <h2>Private Projects</h2>
   <ul>
   <% @private_projects.each do |project| %>
-    <li><%= project.name %></li>
+    <li><%= link_to "#{project.name}", project_path(project.id) %></li>
   <% end %>
 </ul>
 <% end %>
 <h2>Public Projects</h2>
 <ul>
 <% @public_projects.each do |project| %>
-<li><%= project.name %></li>
+<li><%= link_to "#{project.name}", project_path(project.id) %></li>
 <% end %>
 </ul>

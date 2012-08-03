@@ -7,15 +7,15 @@ class ProjectsController < ApplicationController
   end
   
   def new
+   
     @project = Project.new
     @todo = Todo.new
     3.times { @project.todos.build } 
     @todo.tasks.build
-    audit @todo
   end
   
   def create
-    audit params
+    
     @project = Project.new(params[:project])
     @project.user_id = current_user.id
     if @project.save
@@ -28,7 +28,19 @@ class ProjectsController < ApplicationController
   end
   
   def show
-    @project = Project.new(params[:id])
-    
+     audit "project show params"
+     audit params
+     @project = Project.find(params[:id])
+  end
+  
+  def update
+    @project = Project.find(params[:id])
+    if @project.todo.update_attributes(params[:project])
+      flash[:success] = "Successful Edit"
+      redirect_to project_path
+    else
+      flash[:error] = "Something went wrong"
+      render :new
+    end
   end
 end

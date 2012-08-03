@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-
+    @task = Task.new(params[:task])
   end
 
   def update
