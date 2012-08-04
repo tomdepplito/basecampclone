@@ -1,0 +1,16 @@
+<h1>Make a new Project</h1><br>
+<%= form_for @project,:remote => true do |p| %>
+  <%= p.label "Project Name" %>
+  <%= p.text_field :name  %>
+  <%= p.fields_for :todos, @project.todos do |tf| %>
+    <%= tf.label "Todo name" %>
+    <%= tf.text_field :name %>
+    <%= tf.fields_for :tasks, @todo.tasks do |tsk| %>
+    <%= tsk.label "Task name, sucka" %>
+    <%= tsk.text_field :description %>
+    <% end %>
+  <% end %>
+ <label class="checkbox"><%= p.check_box :public %><%= p.label "Set to Public?" %></label>
+  <br/>
+  <%= p.submit "Create", class: "btn btn-primary" %>
+<% end %>

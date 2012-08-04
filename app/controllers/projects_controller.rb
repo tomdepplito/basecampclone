@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   def index
+    @project = Project.new
     if user_signed_in?
       @private_projects = Project.find_all_by_user_id(current_user.id)
     end
@@ -15,12 +16,13 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    
     @project = Project.new(params[:project])
     @project.user_id = current_user.id
     if @project.save
-      flash[:success] = "You created a new project"
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to @project; flash[:success] = "Project created." }
+        format.js
+      end
     else
       flash[:error] = "Something went wrong"
       render :new
@@ -28,9 +30,9 @@ class ProjectsController < ApplicationController
   end
   
   def show
-     audit "project show params"
-     audit params
      @project = Project.find(params[:id])
+     @todo = Todo.new
+     @task = Task.new
   end
   
   def update

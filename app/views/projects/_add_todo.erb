@@ -1,0 +1,10 @@
+<h2>Add Todo</h2><br>
+<%= form_for @todo, :remote => true do |p| %>
+  <%= p.label "Todo Name" %>
+  <%= p.text_field :name %>
+  <%= p.fields_for :tasks, @todo.tasks do |tsk| %>
+    <%= tsk.label "Task name, sucka" %>
+    <%= tsk.text_field :description %>
+    <% end %>
+  <%= p.submit "Create", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,16 @@
+<h1><%= @project.name %></h1>
+
+<% @project.todos.each do |todo| %>
+<div id="todos">
+<h2><%= todo.name %> <%= link_to "Edit", edit_project_todo_path(@project, todo.id), class: "btn btn-mini btn-warning"%>
+   <%= link_to "Delete", project_todo_path(@project, todo), class: "btn btn-danger btn-mini", :method => :delete %></h2>
+<ul>
+<% todo.tasks.each do |tsk| %>
+  <li><%= tsk.description %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<%= render 'add_todo' %>
+<%= link_to "add todo", "#addtodostuff" %> | 
+<%= link_to "add task", "#addtodostuff" %>

@@ -6,6 +6,15 @@ class TodosController < ApplicationController
   
   def create
     @todo = Todo.new(params[:todo])
+    if @todo.save
+      respond_to do |format|
+        format.html { redirect_to @todo; flash[:success] = "Todo created." }
+        format.js
+      end
+    else
+      flash[:error] = "Something went wrong"
+      render :new
+    end
   end
   
   def edit
